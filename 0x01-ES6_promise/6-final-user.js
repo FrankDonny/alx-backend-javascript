@@ -14,4 +14,5 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
   } catch (error) {
     arr.push({ status: 'failed', value: `${error}` });
   }
+  return arr;
 }
