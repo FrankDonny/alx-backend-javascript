@@ -9,7 +9,3 @@ export default async function handleProfileSignup() {
     })
     .catch(() => console.log('Signup system offline'));
 }
-// export default function handleProfileSignup() {
-//   return Promise.all([uploadPhoto(), createUser()])
-//     .then().catch();
-// }
