@@ -4,7 +4,8 @@ import uploadPhoto from './5-photo-reject';
 export default async function handleProfileSignup(firstName, lastName, fileName) {
   const arr = [];
   try {
-    const [sign, upload] = await Promise.all([signUpUser(firstName, lastName), uploadPhoto(fileName)]);
+    const [sign, upload] = await Promise.all([signUpUser(firstName, lastName),
+      uploadPhoto(fileName)]);
     if (sign) {
       arr.push({ status: 'success', value: `${sign}` });
     } else {
