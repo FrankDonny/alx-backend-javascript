@@ -11,6 +11,7 @@ export default class HolbertonClass {
     }
     if (hint === 'number') { // eslint-disable-next-line no-underscore-dangle
       return this._size;
-    }
+    }// eslint-disable-next-line no-underscore-dangle
+    return this._size;
   }
 }
