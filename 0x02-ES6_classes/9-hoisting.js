@@ -1,28 +1,29 @@
 /* eslint max-classes-per-file: "off" */
 
 export class HolbertonClass {
-  constructor(year, location) {
-    this._year = year;
+  constructor(year, location) { // eslint-disable-next-line no-underscore-dangle
+    this._year = year;// eslint-disable-next-line no-underscore-dangle
     this._location = location;
   }
 
-  get year() {
+  get year() { // eslint-disable-next-line no-underscore-dangle
     return this._year;
   }
 
-  get location() {
+  get location() { // eslint-disable-next-line no-underscore-dangle
     return this._location;
   }
 }
 
 export class StudentHolberton {
   constructor(firstName, lastName, holbertonClass) {
-    this._firstName = firstName;
-    this._lastName = lastName;
+    // eslint-disable-next-line no-underscore-dangle
+    this._firstName = firstName;// eslint-disable-next-line no-underscore-dangle
+    this._lastName = lastName;// eslint-disable-next-line no-underscore-dangle
     this._holbertonClass = holbertonClass;
   }
 
-  get fullName() {
+  get fullName() { // eslint-disable-next-line no-underscore-dangle
     return `${this._firstName} ${this._lastName}`;
   }
 
@@ -30,7 +31,7 @@ export class StudentHolberton {
     return this.holbertonClass;
   }
 
-  get fullStudentDescription() {
+  get fullStudentDescription() { // eslint-disable-next-line no-underscore-dangle
     return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
   }
 }
