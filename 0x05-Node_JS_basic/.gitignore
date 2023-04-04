@@ -1,0 +1,5 @@
+.dist
+*main*
+package.json
+babel.config.json
+.eslintrc.js
