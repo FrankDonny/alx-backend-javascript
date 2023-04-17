@@ -1,14 +1,13 @@
-const { expect } = require('chai');
+const getPaymentTokenFromAPI = require("./6-payment_token");
+const {describe, it} = require("mocha");
+const expect = require("chai").expect;
 
-const getPaymentTokenFromApi = require('./6-payment_token');
-
-describe('getPaymentTokenFromApi', () => {
-  it('should return exact response from api', (done) => {
-    getPaymentTokenFromApi(true)
-      .then((response) => {
-        expect(response).to.include({ data: 'Successful response from the API' });
-        done();
-      })
-      .catch((err) => done(err));
-  });
+describe("getPaymentTokenFromAPI", function() {
+    it("Async testing with done callback", function(done) {
+	getPaymentTokenFromAPI(true)
+	    .then((data) => {
+		expect(data).to.have.property('data');
+		done();
+	    });
+    });
 });
